@@ -1,5 +1,12 @@
 import React from 'react'
 import './Showcase.css'
+import kitchenconcrete from "./images/kitchenconcrete.jpg"
+import atrium from "./images/atrium.jpg"
+import livingroom from "./images/livingroom.jpg"
+import diningroom from "./images/diningroom.jpg"
+import bedroom from "./images/bedroom.jpg"
+import livingroom2 from "./images/livingroom2.jpg"
+
 
 function Showcase() {
     return (
@@ -7,12 +14,12 @@ function Showcase() {
             <h2>Showcase.</h2>
             <hr />
             <div className="images">
-                <img src="images/kitchenconcrete.jpg" />
-                <img src="images/atrium.jpg" />
-                <img src="images/livingroom.jpg" />
-                <img src="images/diningroom.jpg" />
-                <img src="images/bedroom.jpg" />
-                <img src="images/livingroom2.jpg" />
+                <img src={kitchenconcrete} />
+                <img src={atrium} />
+                <img src={livingroom} />
+                <img src={diningroom} />
+                <img src={bedroom} />
+                <img src={livingroom2} />
             </div>
         </div>
     );
