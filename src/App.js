@@ -1,31 +1,16 @@
 import React from 'react'
 import './App.css';
-import Menu from './components/Menu'
-import Showcase from './components/Showcase'
-import Services from './components/Services'
-import Designers from './components/Designers'
-import Packages from './components/Packages'
-import Tariffs from './components/Tariffs'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Header from './components/header/Header'
+import Navbar from './components/navbar/Navbar'
+import Profile from './components/profile/Profile'
 
 function App() {
     return (
-        <>
-            <Menu />
-            <div className="main">
-                <h1>Interior Design</h1>
-                <Showcase />
-                <Services />
-                <Designers/>
-
-                <Packages/>
-                <Tariffs/>
-                <Contact/>
-            </div>
-            <Footer/>
-            
-        </>
+        <div className="wrapper">
+           <Header />
+           <Navbar />
+           <Profile />
+        </div>
   );
 }
 
