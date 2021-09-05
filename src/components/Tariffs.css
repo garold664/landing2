@@ -1,27 +1,3 @@
-.member {
-	padding: 8px 8px;
-	width: 30%;
-	display: inline-block;
-	/* опционально */
-	box-sizing: border-box; 
-}
-
-.member img {
-	filter: grayscale(30%);
-	border-radius:10px;
-	width: 100%;
-}
-
-.member .description {
-	background-color: #f1f1f1;
-	border-radius:5px;
-	padding: 2px 16px 5px;
-}
-
-.member .position {
-	color: gray;
-}
-
 .tariff {
 	width: 49%;
 	padding: 0 8px;
@@ -94,43 +70,4 @@
 .pro button {
 	background-color: #f44336;
 	color: white;
-}
-
-#contact input {
-	border: 1px solid #ccc;
-	outline: none;
-	padding: 8px;
-	display: block;
-	width: 100%;
-	box-sizing: border-box;
-	font-size: 16px;
-}
-
-#contact button {
-	border: none;
-	outline: none;
-	color: #fff;
-	background-color: #45015d;
-	border-radius:10px;
-	padding: 12px 24px;
-	display: block;
-	width: 100%;
-	cursor: pointer;
-	font-family: inherit;
-	font-size: 16px;
-}
-
-#contact button:hover {
-	color: #000;
-	background-color: #ccc;
-}
-
-#footer {
-	padding: 32px 58px 32px;
-	background-color: #f1f1f1;
-	text-align: right;
-}
-
-#footer a {
-	color: black;
 }
