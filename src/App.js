@@ -3,14 +3,6 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello, world!</h1>
-    </div>
-  );
-}
-
-export function Menu() {
-  return (
     <>
       <div className="menu">
           <h3>Company Name</h3>
