@@ -12,7 +12,7 @@ function Designers() {
             </p>
             <p><b>Our designers are thoughtfully chosen</b>:</p>
             <div className="member">
-            <img src="images/team2.jpg" alt="John" />
+            <img src={require("./images/team2.jpg").default} alt="John" />
             <div className="description">
                 <h3>John Doe</h3>
                 <p className="position">CEO &amp; Founder</p>
@@ -20,7 +20,7 @@ function Designers() {
             </div>
             </div>
             <div className="member">
-            <img src="images/team1.jpg" alt="Jane" />
+            <img src={require("./images/team1.jpg").default} alt="Jane" />
             <div className="description">
                 <h3>Jane Doe</h3>
                 <p className="position">Designer</p>
@@ -28,7 +28,7 @@ function Designers() {
             </div>
             </div>
             <div className="member">
-            <img src="images/team3.jpg" alt="Mike" />
+            <img src={require("./images/team3.jpg").default} alt="Mike" />
             <div className="description">
                 <h3>Mike Ross</h3>
                 <p className="position">Architect</p>
