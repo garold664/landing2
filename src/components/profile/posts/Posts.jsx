@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Post from './post/Post'
 // import ava from "../../img/elon.jpg"
 import ava_min from "../../../img/elon_min.jpg"
 
@@ -8,11 +8,7 @@ function Posts() {
         <div className='posts'>
             <input placeholder='enter the post' />
             <button>Add post</button>
-            <div className='post'>
-                <img src={ava_min} alt="profile mini photo" />
-                <span>Elon Mask</span>
-                <p>Some text</p>
-            </div>
+            <Post />
         </div>
   );
 }
