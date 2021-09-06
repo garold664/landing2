@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
 import Dialogs from './components/dialogs/Dialogs'
 
+
 function App() {
     return (
         <div className="wrapper">
