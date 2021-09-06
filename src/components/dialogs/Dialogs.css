@@ -1,0 +1,18 @@
+.dialogs form {
+    margin-left: 30%;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.message_name {
+    text-align: center;
+}
+
+.message_text {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: skyblue;
+}
