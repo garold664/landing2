@@ -5,17 +5,19 @@ import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
 import Dialogs from './components/dialogs/Dialogs'
 
+import {BrowserRouter} from 'react-router-dom'
 
 function App() {
     return (
         <div className="wrapper">
-           <Header />
-           <Navbar />
-           <div className="wrapper-content">
+          <BrowserRouter>
+            <Header />
+            <Navbar />
+            <div className="wrapper-content">
             <Profile />
             <Dialogs />
-           </div>
-           
+            </div>
+          </BrowserRouter>
         </div>
   );
 }
