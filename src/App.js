@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
 import Dialogs from './components/dialogs/Dialogs'
 
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 
 function App() {
     return (
@@ -14,8 +14,8 @@ function App() {
             <Header />
             <Navbar />
             <div className="wrapper-content">
-            <Profile />
-            <Dialogs />
+              <Route path="/profile" component={Profile} />
+              <Route path="/dialogs" component={Dialogs} />
             </div>
           </BrowserRouter>
         </div>
