@@ -1,17 +1,24 @@
-.dialogs form {
-    margin-left: 30%;
-}
-
-.message {
+.dialogs {
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
-.message_name {
-    text-align: center;
+.dialogs form {
+    margin-left: 30%;
 }
 
-.message_text {
+.user a {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 22px;
+    color: black;
+}
+
+.message p {
     padding: 10px;
     border-radius: 5px;
     background-color: skyblue;
