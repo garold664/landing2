@@ -4,20 +4,33 @@ import './Dialogs.css';
 import DialogItem from './dialogItem/DialogItem';
 import Message from './message/Message';
 
-
+let dialogNames = [
+    {name: 'Иван Иванов', id: 1},
+    {name: 'Илон Маск', id: 2},
+    {name: 'Билл Гейтс', id: 3}
+];
+let messageItems = [
+    {message: 'Привет', id: 1},
+    {message: 'Го на Марс', id: 2},
+    {message: 'Где мой чип?', id: 3}
+];
 
 function Dialogs() {
     return (
         <div className='dialogs'>
             <div className="dialog">
-                <DialogItem name='Иван Иванов' id='1' />
-                <DialogItem name='Илон Маск' id='2' />
-                <DialogItem name='Бил Гейтс' id='3' />
+                {
+                    dialogNames.map((e) => {
+                        return <DialogItem name = {e.name} id = {e.id} />
+                    })
+                }
             </div>
             <div className="messages">
-                <Message message="Привет" />
-                <Message message="Го на Марс" />
-                <Message message="Где мой чип?" />
+                {
+                    messageItems.map((e) => {
+                        return <Message message = {e.message} id = {e.id} />
+                    })
+                }
             </div>
             <form action="">
                 <input type="text" />
