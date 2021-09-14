@@ -12,6 +12,7 @@ function Post(props) {
             <img src={ava_min} alt="profile mini photo" />
             <span>{props.name}</span>
             <p>{props.message}</p>
+            <span className="likes">Likes: {props.likes}</span>
         </div>
   );
 }

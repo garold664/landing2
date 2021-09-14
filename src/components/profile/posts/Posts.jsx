@@ -4,10 +4,10 @@ import Post from './post/Post'
 import ava_min from "../../../img/elon_min.jpg"
 
 let postItems = [
-    {name: 'some guy', message: "Any message"},
-    {name: 'Elon Musk', message: "Lorem Ipsum"},
-    {name: 'Elon Musk', message: "Anything else"},
-    {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur"},
+    {name: 'some guy', message: "Any message", likes: 1},
+    {name: 'Elon Musk', message: "Lorem Ipsum", likes: 3},
+    {name: 'Elon Musk', message: "Anything else", likes: 2},
+    {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
 ];
 
 function Posts() {
@@ -17,7 +17,7 @@ function Posts() {
             <button>Add post</button>
             {
                 postItems.map((e) => {
-                    return <Post name = {e.name} message = {e.message} />
+                    return <Post name = {e.name} message = {e.message} likes = {e.likes} />
                 })
             }
             {/* <Post name="some guy"  message = "Any message" />
