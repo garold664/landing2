@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+let postItems = [
+  {name: 'some guy', message: "Any message", likes: 1},
+  {name: 'Elon Musk', message: "Lorem Ipsum", likes: 3},
+  {name: 'Elon Musk', message: "Anything else", likes: 2},
+  {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App postItems={postItems} />
   </React.StrictMode>,
   document.getElementById('root')
 );
