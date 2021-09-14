@@ -12,9 +12,21 @@ let postItems = [
   {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
 ];
 
+let dialogNames = [
+  {name: 'Иван Иванов', id: 1},
+  {name: 'Илон Маск', id: 2},
+  {name: 'Билл Гейтс', id: 3}
+];
+
+let messageItems = [
+  {message: 'Привет', id: 1},
+  {message: 'Го на Марс', id: 2},
+  {message: 'Где мой чип?', id: 3}
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App postItems={postItems} />
+    <App postItems={postItems} dialogNames={dialogNames} messageItems={messageItems} />
   </React.StrictMode>,
   document.getElementById('root')
 );
