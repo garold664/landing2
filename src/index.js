@@ -3,30 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
-let postItems = [
-  {name: 'some guy', message: "Any message", likes: 1},
-  {name: 'Elon Musk', message: "Lorem Ipsum", likes: 3},
-  {name: 'Elon Musk', message: "Anything else", likes: 2},
-  {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
-];
-
-let dialogNames = [
-  {name: 'Иван Иванов', id: 1},
-  {name: 'Илон Маск', id: 2},
-  {name: 'Билл Гейтс', id: 3}
-];
-
-let messageItems = [
-  {message: 'Привет', id: 1},
-  {message: 'Го на Марс', id: 2},
-  {message: 'Где мой чип?', id: 3}
-];
+import state from './Data/state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App postItems={postItems} dialogNames={dialogNames} messageItems={messageItems} />
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );

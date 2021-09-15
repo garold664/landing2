@@ -15,9 +15,9 @@ function App(props) {
             <Header />
             <Navbar />
             <div className="wrapper-content">
-              <Route exact path="/" render={ () => <Profile postItems={props.postItems} />} />
-              <Route exact path="/profile" render={ () => <Profile  postItems={props.postItems}  />} />
-              <Route exact path="/dialogs" render={ () => <Dialogs dialogNames={props.dialogNames} messageItems={props.messageItems}  />} />
+              <Route exact path="/" render={ () => <Profile postItems={props.state.postItems} />} />
+              <Route exact path="/profile" render={ () => <Profile  postItems={props.state.postItems}  />} />
+              <Route exact path="/dialogs" render={ () => <Dialogs dialogNames={props.state.dialogNames} messageItems={props.messageItems}  />} />
             </div>
           </BrowserRouter>
         </div>
