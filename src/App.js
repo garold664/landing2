@@ -17,7 +17,7 @@ function App(props) {
             <div className="wrapper-content">
               <Route exact path="/" render={ () => <Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
               <Route exact path="/profile" render={ () => <Profile  profilePage={props.state.profilePage} addPost={props.addPost}  />} />
-              <Route exact path="/dialogs" render={ () => <Dialogs dialogsPage={props.state.dialogsPage} />} />
+              <Route exact path="/dialogs" render={ () => <Dialogs dialogsPage={props.state.dialogsPage} addMessage={props.addMessage} />} />
             </div>
           </BrowserRouter>
         </div>

@@ -41,5 +41,14 @@ export let addPost = (postText) => {
     state.profilePage.postItems.push(newPost)
     console.log(state)
 }
+export let addMessage = (messageText) => {
+    let newMessage = {
+        text: messageText,
+        id: 4,
+    }
+
+    state.dialogsPage.messageItems.push(newMessage)
+    console.log(state)
+}
 
 export default state;

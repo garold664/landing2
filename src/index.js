@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './Data/state'
 import {addPost} from './Data/state'
+import {addMessage} from './Data/state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} addPost={addPost} />
+    <App state={state} addPost={addPost} addMessage={addMessage} />
   </React.StrictMode>,
   document.getElementById('root')
 );
