@@ -3,11 +3,12 @@ import Post from './post/Post'
 
 let postText = React.createRef()
 
-let addPost = () => {
-    alert(postText.current.value)
-}
+
 
 function Posts(props) {
+    let addPost = () => {
+        props.addPost(postText.current.value)
+    }
     return (
         <div className='posts'>
             <input ref = {postText} placeholder='enter the post' />

@@ -15,8 +15,8 @@ function App(props) {
             <Header />
             <Navbar navbar = {props.state.navbar} />
             <div className="wrapper-content">
-              <Route exact path="/" render={ () => <Profile profilePage={props.state.profilePage} />} />
-              <Route exact path="/profile" render={ () => <Profile  profilePage={props.state.profilePage}  />} />
+              <Route exact path="/" render={ () => <Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
+              <Route exact path="/profile" render={ () => <Profile  profilePage={props.state.profilePage} addPost={props.addPost}  />} />
               <Route exact path="/dialogs" render={ () => <Dialogs dialogsPage={props.state.dialogsPage} />} />
             </div>
           </BrowserRouter>
