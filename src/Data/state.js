@@ -1,4 +1,11 @@
 let state = {
+    navbar: {
+        friends: [
+            {name: 'Bill', ava: 'friend1.jpg'},
+            {name: 'John', ava: 'friend2.jpg'},
+            {name: 'Alex', ava: 'friend3.png'},
+        ]
+    },
     profilePage: {
         postItems: [
             {name: 'some guy', message: "Any message", likes: 1},

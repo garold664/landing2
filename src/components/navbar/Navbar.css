@@ -14,4 +14,12 @@
     color: #000;
     background-color: #ff9;
 }
-    
+
+.friends {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.friend img {
+    width: 50px;
+}

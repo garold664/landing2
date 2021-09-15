@@ -13,7 +13,7 @@ function App(props) {
         <div className="wrapper">
           <BrowserRouter>
             <Header />
-            <Navbar />
+            <Navbar navbar = {props.state.navbar} />
             <div className="wrapper-content">
               <Route exact path="/" render={ () => <Profile profilePage={props.state.profilePage} />} />
               <Route exact path="/profile" render={ () => <Profile  profilePage={props.state.profilePage}  />} />
