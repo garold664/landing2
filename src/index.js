@@ -7,13 +7,16 @@ import state from './Data/state'
 import {addPost} from './Data/state'
 import {addMessage} from './Data/state'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App state={state} addPost={addPost} addMessage={addMessage} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export let rerenderTree = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App state={state} addPost={addPost} addMessage={addMessage} />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
 
+rerenderTree();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

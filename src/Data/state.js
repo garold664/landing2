@@ -1,3 +1,5 @@
+import {rerenderTree} from '../index'
+
 let state = {
     navbar: {
         friends: [
@@ -33,21 +35,23 @@ let state = {
 
 export let addPost = (postText) => {
     let newPost = {
-        text: postText,
+        message: postText,
         id: 4,
         likes: 0 
     }
 
     state.profilePage.postItems.push(newPost)
+    rerenderTree()
     console.log(state)
 }
 export let addMessage = (messageText) => {
     let newMessage = {
-        text: messageText,
+        message: messageText,
         id: 4,
     }
 
     state.dialogsPage.messageItems.push(newMessage)
+    rerenderTree()
     console.log(state)
 }
 
