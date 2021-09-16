@@ -1,4 +1,4 @@
-import {rerenderTree} from '../index'
+import {rerenderTree} from '../render'
 
 let state = {
     navbar: {
@@ -40,9 +40,9 @@ export let addPost = (postText) => {
         likes: 0 
     }
 
-    state.profilePage.postItems.push(newPost)
-    rerenderTree()
-    console.log(state)
+    state.profilePage.postItems.unshift(newPost)
+    rerenderTree(state)
+    // console.log(state)
 }
 export let addMessage = (messageText) => {
     let newMessage = {
@@ -50,9 +50,9 @@ export let addMessage = (messageText) => {
         id: 4,
     }
 
-    state.dialogsPage.messageItems.push(newMessage)
-    rerenderTree()
-    console.log(state)
+    state.dialogsPage.messageItems.unshift(newMessage)
+    rerenderTree(state)
+    // console.log(state)
 }
 
 export default state;

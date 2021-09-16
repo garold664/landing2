@@ -9,6 +9,7 @@ let MessageText = React.createRef()
 function Dialogs(props) {
     let addMessage = () => {
         props.addMessage(MessageText.current.value)
+        MessageText.current.value = ''
     }
     return (
         <div className='dialogs'>
