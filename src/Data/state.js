@@ -1,5 +1,3 @@
-import {rerenderTree} from '../render'
-
 let state = {
     navbar: {
         friends: [
@@ -68,6 +66,14 @@ export let onPostChange = (text) => {
 export let onMessageChange = (text) => {
     state.dialogsPage.newMessageText = text
     rerenderTree(state)
+}
+
+let rerenderTree = () => {
+    console.log("It's fake")
+}
+
+export let subscribe = (observer) => {
+    rerenderTree = observer
 }
 
 export default state;
