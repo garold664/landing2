@@ -15,7 +15,7 @@ let state = {
             {name: 'Elon Musk', message: "Anything else", likes: 2},
             {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
         ],
-        newPostText: 'hello'
+        newPostText: ''
     },
 
     dialogsPage: {
@@ -42,9 +42,11 @@ export let addPost = (postText) => {
     }
 
     state.profilePage.postItems.unshift(newPost)
+    state.profilePage.newPostText = ''
     rerenderTree(state)
     // console.log(state)
 }
+
 export let addMessage = (messageText) => {
     let newMessage = {
         message: messageText,
@@ -54,6 +56,11 @@ export let addMessage = (messageText) => {
     state.dialogsPage.messageItems.unshift(newMessage)
     rerenderTree(state)
     // console.log(state)
+}
+
+export let onPostChange = (text) => {
+    state.profilePage.newPostText = text
+    rerenderTree(state)
 }
 
 export default state;

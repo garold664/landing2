@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {addPost} from './Data/state'
 import {addMessage} from './Data/state'
+import {onPostChange} from './Data/state'
 
 export let rerenderTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={state} addPost={addPost} addMessage={addMessage} />
+      <App state={state} addPost={addPost} addMessage={addMessage} onPostChange={onPostChange} />
     </React.StrictMode>,
     document.getElementById('root')
   );
