@@ -12,7 +12,7 @@ function Posts(props) {
     }
     return (
         <div className='posts'>
-            <input ref = {postText} placeholder='enter the post' />
+            <input value={props.newPostText} ref = {postText} placeholder='enter the post' />
             <button onClick={addPost}>Add post</button>
             {
                 props.postItems.map((e) => {

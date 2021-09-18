@@ -14,7 +14,8 @@ let state = {
             {name: 'Elon Musk', message: "Lorem Ipsum", likes: 3},
             {name: 'Elon Musk', message: "Anything else", likes: 2},
             {name: 'Elon Musk', message: "Elon Musk is really great inventor and entrepreneur", likes: 15},
-        ]
+        ],
+        newPostText: 'hello'
     },
 
     dialogsPage: {
