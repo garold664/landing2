@@ -4,9 +4,15 @@ import './Dialogs.css';
 import DialogItem from './dialogItem/DialogItem';
 import Message from './message/Message';
 
+
 let MessageText = React.createRef()
 
 function Dialogs(props) {
+
+    let onMessageChange = () => {
+        props.onMessageChange(MessageText.current.value)
+    }
+
     let addMessage = () => {
         props.addMessage(MessageText.current.value)
         MessageText.current.value = ''
@@ -28,7 +34,7 @@ function Dialogs(props) {
                 }
             </div>
             <form action="">
-                <input ref={MessageText} type="text" />
+                <input onChange={onMessageChange} value={props.dialogsPage.newMessageText} ref={MessageText} type="text" />
                 <br />
                 <input onClick={addMessage} type="button" value="send" />
             </form>

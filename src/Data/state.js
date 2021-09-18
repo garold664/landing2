@@ -30,7 +30,8 @@ let state = {
             {message: 'Привет', id: 1},
             {message: 'Го на Марс', id: 2},
             {message: 'Где мой чип?', id: 3}
-        ]
+        ],
+        newMessageText: ''
     }
 };
 
@@ -54,12 +55,18 @@ export let addMessage = (messageText) => {
     }
 
     state.dialogsPage.messageItems.unshift(newMessage)
+    state.dialogsPage.newMessageText = '';
     rerenderTree(state)
     // console.log(state)
 }
 
 export let onPostChange = (text) => {
     state.profilePage.newPostText = text
+    rerenderTree(state)
+}
+
+export let onMessageChange = (text) => {
+    state.dialogsPage.newMessageText = text
     rerenderTree(state)
 }
 
