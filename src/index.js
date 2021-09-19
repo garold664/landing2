@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './Data/state'
+import store from './Data/state'
 import {addPost} from './Data/state'
 import {addMessage} from './Data/state'
 import {onPostChange} from './Data/state'
@@ -14,17 +14,17 @@ export let rerenderTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
       <App state={state} 
-        addPost={addPost} 
-        addMessage={addMessage} 
-        onPostChange={onPostChange} 
-        onMessageChange={onMessageChange} 
+        addPost={store.addPost} 
+        addMessage={store.addMessage} 
+        onPostChange={store.onPostChange} 
+        onMessageChange={store.onMessageChange} 
       />
     </React.StrictMode>,
     document.getElementById('root')
   );
 }
-subscribe(rerenderTree)
-rerenderTree(state)
+store.subscribe(rerenderTree)
+store.rerenderTree(store.getState())
 
 
 // If you want to start measuring performance in your app, pass a function

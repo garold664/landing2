@@ -1,6 +1,6 @@
 
 let store = {
-    _state = {
+    _state: {
         navbar: {
             friends: [
                 {name: 'Bill', ava: 'friend1.jpg'},
@@ -35,47 +35,51 @@ let store = {
         }
     },
 
-    addPost (postText) {
+    addPost(postText) {
         let newPost = {
             message: postText,
             id: 4,
             likes: 0 
         }
 
-        state.profilePage.postItems.unshift(newPost)
-        state.profilePage.newPostText = ''
-        rerenderTree(state)
+        this._state.profilePage.postItems.unshift(newPost)
+        this._state.profilePage.newPostText = ''
+        this.rerenderTree(this._state)
         // console.log(state)
     },
 
-    addMessage (messageText) {
+    addMessage(messageText) {
         let newMessage = {
             message: messageText,
             id: 4,
         }
 
-        state.dialogsPage.messageItems.unshift(newMessage)
-        state.dialogsPage.newMessageText = '';
-        rerenderTree(state)
+        this._state.dialogsPage.messageItems.unshift(newMessage)
+        this._state.dialogsPage.newMessageText = '';
+        this.rerenderTree(this._state)
         // console.log(state)
     },
 
-    onPostChange (text) {
-        state.profilePage.newPostText = text
-        rerenderTree(state)
+    onPostChange(text) {
+        this._state.profilePage.newPostText = text
+        this.rerenderTree(this._state)
     },
 
-    onMessageChange (text) {
-        state.dialogsPage.newMessageText = text
-        rerenderTree(state)
+    onMessageChange(text) {
+        this._state.dialogsPage.newMessageText = text
+        this.rerenderTree(this._state)
     },
 
-    rerenderTree () {
+    rerenderTree() {
         console.log("It's fake")
     },
 
     subscribe (observer) {
-        rerenderTree = observer
+        this.rerenderTree = observer
+    },
+
+    getState() {
+        return this._state
     }
 }
 export default store;
