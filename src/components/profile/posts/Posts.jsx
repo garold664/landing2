@@ -33,7 +33,6 @@ function Posts(props) {
             <Post name="Elon Musk" message = "Lorem Ipsum" />
             <Post name="Elon Musk" message = "Anything else" />
             <Post name="Elon Musk" message = "Elon Musk is really great inventor and entrepreneur" />
->>>>>>> a4f752ebbba862aeede2b1bdf6668b8a8bf7c928
         </div>
   );
 }
