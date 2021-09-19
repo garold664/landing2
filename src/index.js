@@ -14,10 +14,10 @@ export let rerenderTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
       <App state={state} 
-        addPost={store.addPost} 
-        addMessage={store.addMessage} 
-        onPostChange={store.onPostChange} 
-        onMessageChange={store.onMessageChange} 
+        addPost={store.addPost.bind(store)} 
+        addMessage={store.addMessage.bind(store)} 
+        onPostChange={store.onPostChange.bind(store)} 
+        onMessageChange={store.onMessageChange.bind(store)} 
       />
     </React.StrictMode>,
     document.getElementById('root')
